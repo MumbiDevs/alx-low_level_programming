@@ -18,16 +18,15 @@ int main(void)
     /* Check if the number is positive, zero, or negative and print the corresponding message*/
         if (n > 0)
 {
-            printf("is positive\n");
+        printf("is positive\n");
 }
         else if (n == 0)
 {
-            printf("is zero\n");
+        printf("is zero\n");
 }
         else
 {
-            printf("is negative\n");
+        printf("is negative\n");
 }
-
         return 0;
 }

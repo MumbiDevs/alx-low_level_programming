@@ -13,7 +13,7 @@ int main(void)
     n = rand() - RAND_MAX / 2;
 
     /* Print the randomly generated number*/
-    printf("The number: %d\n", n);
+    printf("%d\n", n);
 
     /* Check if the number is positive, zero, or negative and print the corresponding message*/
     if (n > 0)

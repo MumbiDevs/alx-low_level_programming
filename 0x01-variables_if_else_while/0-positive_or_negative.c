@@ -10,7 +10,7 @@ int main(void)
     srand(time(0));
 
     /* Generate a random number and store it in n*/
-    n = rand() % (2 * RAND_MAX) - RAND_MAX;
+    n = rand() - RAND_MAX / 2;
 
     /* Print the randomly generated number*/
     printf("The number: %d\n", n);

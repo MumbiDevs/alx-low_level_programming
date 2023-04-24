@@ -1,14 +1,18 @@
-#include <stdio.h>
 #include <unistd.h>
 
 /**
- * main - prints exacctly "and that piece of art is useful"
- * - Dora Korpar, 2015-10-19",
- *   followed by a new line, to the standard error.
- *   Return:Always 0 (Success)
+ * main - Entry point of the program
+ *
+ * Return: Always 1 (to indicate an error)
  */
-int main (void)
+int main(void)
 {
-	write(2, "and that piece of art is useful\" -Dora Korpar, 2015-10-19\n", 59);
-	return (1);
-}	
+    /* Message to be printed*/
+char messa[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+    /* Write the message to standard error (stderr)*/
+write(2, messa, sizeof(messa) - 1);
+
+    /* Return 1 as per requirement*/
+return (1);
+}

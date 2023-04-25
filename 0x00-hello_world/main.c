@@ -38,4 +38,3 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Compiled output saved to $base_name.o."
-

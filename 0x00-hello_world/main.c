@@ -17,7 +17,7 @@
 #
 
 # Get the C file name from the environment variable $CFILE
-cfile="$CFILE"
+cfile="0x00-hello_world/main.c"
 
 # Check if the C file exists
 if [ ! -f "$cfile" ]; then

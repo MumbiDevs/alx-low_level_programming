@@ -23,7 +23,7 @@ int main(void)
 	/* Print the randomly generated number */
 	printf("%d ", n);
 
-	/* Check if the number is positive, zero, or negative and print the corresponding message */
+	/* Check if number is positive, zero, or negative and print the message*/
 	if (n > 0)
 		printf("is positive\n");
 	else if (n == 0)

@@ -1,3 +1,16 @@
+#include <stdio.h>
+
+/**
+ * _putchar - Custom putchar function to print characters to stdout
+ * @c: The character to be printed
+ *
+ * Return: The printed character on success, -1 on error
+ */
+int _putchar(char c)
+{
+	return putchar(c);
+}
+
 /**
  * print_alphabet_x10 - Prints the lowercase alphabet 10 times, followed by a newline
  *

@@ -12,7 +12,6 @@
 void print_alphabet(void)
 {
 	char c; /* Variable to store each character of the alphabet */
-
 	for (c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);

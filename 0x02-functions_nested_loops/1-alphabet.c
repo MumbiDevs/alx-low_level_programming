@@ -1,8 +1,10 @@
+#include <stdio.h>
+
 /**
  * print_alphabet - Prints the lowercase alphabet followed by a newline
  *
  * Description: This function prints the lowercase alphabet (from 'a' to 'z')
- * using the _putchar function. It then prints a newline character to create a
+ * using the putchar function. It then prints a newline character to create a
  * newline at the end of the alphabet.
  *
  * Return: void
@@ -13,7 +15,7 @@ void print_alphabet(void)
 
 	for (c = 'a'; c <= 'z'; c++)
 	{
-		_putchar(c);
+		putchar(c);
 	}
-	_putchar('\n');
+	putchar('\n');
 }

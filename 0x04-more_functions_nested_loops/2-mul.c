@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-int mul(int a, int b);
+int mul(int a, int b) {
+    return a * b;
+}
 
 int main() {
     int a = 5;

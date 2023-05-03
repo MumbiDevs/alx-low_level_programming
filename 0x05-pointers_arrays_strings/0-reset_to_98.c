@@ -1,4 +1,4 @@
-#include "main.h";
+#include "main.h"
 
 /** This is a code to reser to 98
 *The function is reset_to_98

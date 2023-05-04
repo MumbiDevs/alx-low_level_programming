@@ -31,7 +31,4 @@ int main(void)
     char str[] = "Hello, world!";
     int len = _strlen(str);
 
-    printf("Length of string \"%s\": %d\n", str, len);
-
-    return (0);
-}
+    printf("Length of string \"%s\": %d\l

@@ -6,7 +6,7 @@
  * @b: pointer to second integer
  * Return: void
  */
-void swaps_int(int *a, int *b)
+void swap_int(int *a, int *b)
 {
     int temp;
 

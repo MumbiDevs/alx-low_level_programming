@@ -17,18 +17,3 @@ void _puts(char *str)
 
     putchar('\n');
 }
-
-/**
- * main - entry point of the program
- *
- * Return: 0 on success
- */
-
-int main(void)
-{
-    char str[] = "Hello, world!";
-
-    _puts(str);
-
-    return (0);
-}

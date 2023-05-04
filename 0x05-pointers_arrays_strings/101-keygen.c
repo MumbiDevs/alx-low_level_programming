@@ -20,10 +20,11 @@ int main(void)
     srand(time(NULL));
 
     /* Generate a random character for each position in the password */
-int i;
-for (i = 0; i < PASSWORD_LENGTH; i++) {
-    password[i] = charset[rand() % charset_length];
-}
+    for (int i = 0; i < PASSWORD_LENGTH; i++)
+    {
+        password[i] = charset[rand() % charset_length];
+    }
+
     /* Add the null terminator to the end of the password */
     password[PASSWORD_LENGTH] = '\0';
 

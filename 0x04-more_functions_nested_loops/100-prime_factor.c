@@ -7,43 +7,34 @@
  *
  * Return: The largest prime factor of n
  */
-unsigned long largest_prime_factor(unsigned long n)
-{
-    unsigned long i, max;
-
-    max = 2;
-
-    while (n % 2 == 0)
-    {
-        n /= 2;
-    }
-
-    for (i = 3; i <= sqrt(n); i += 2)
-    {
-        while (n % i == 0)
-        {
-            max = i;
-            n /= i;
-        }
-    }
-
-    if (n > 2)
-    {
-        max = n;
-    }
-
-    return max;
-}
-
-#include <stdio.h>
-#include <math.h>
-
 int main(void)
 {
-    unsigned long n = 612852475143;
-    unsigned long largest = largest_prime_factor(n);
+	long int n;
+	long int max;
+	long int i;
 
-    printf("%lu\n", largest);
+	n = 612852475143;
+	max = -1;
 
-    return 0;
+	while (n % 2 == 0)
+	{
+		max = 2;
+		n /= 2;
+	}
+
+	for (i = 3; i <= sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
+		{
+			max = i;
+			n = n / i;
+		}
+	}
+
+	if (n > 2)
+		max = n;
+
+	printf("%ld\n", max);
+
+	return (0);
 }

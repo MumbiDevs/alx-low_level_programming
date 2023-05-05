@@ -3,48 +3,28 @@
 #include <string.h>
 
 /**
- * infinite_add - Adds two numbers
- * @n1: First number to add
- * @n2: Second number to add
- * @r: Buffer to store the result
- * @size_r: Size of the result buffer
+ * main - Entry point
  *
- * Return: Pointer to the result buffer, or 0 if the result can't be stored
+ * Return: Always 0
  */
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
+
+int main(void)
 {
-    int len1 = strlen(n1);
-    int len2 = strlen(n2);
-    int carry = 0;
-    int sum = 0;
-    int i, j;
+    char n1[] = "123456789";
+    char n2[] = "987654321";
+    char r[20];
+    char *result;
 
-    /* Make sure the result buffer is large enough to hold the sum */
-    if (len1 + len2 > size_r - 1)
+    result = infinite_add(n1, n2, r, sizeof(r));
+
+    if (result != 0)
     {
-        return (0);
+        printf("%s + %s = %s\n", n1, n2, result);
+    }
+    else
+    {
+        printf("Error: result does not fit in buffer\n");
     }
 
-    /* Add the numbers digit by digit, starting from the least significant digit */
-    for (i = len1 - 1, j = len2 - 1; i >= 0 || j >= 0 || carry; i--, j--)
-    {
-        int digit1 = i >= 0 ? n1[i] - '0' : 0;
-        int digit2 = j >= 0 ? n2[j] - '0' : 0;
-        sum = digit1 + digit2 + carry;
-        carry = sum / 10;
-        r[i + j + 1] = (sum % 10) + '0';
-    }
-
-    /* Add the null terminator to the result buffer */
-    r[len1 + len2] = '\0';
-
-    /* Reverse the order of the digits in the result buffer */
-    for (i = 0, j = len1 + len2 - 1; i < j; i++, j--)
-    {
-        char temp = r[i];
-        r[i] = r[j];
-        r[j] = temp;
-    }
-
-    return (r);
+    return (0);
 }

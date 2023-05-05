@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <math.h>
 
 /**
  * largest_prime_factor - Finds and prints the largest prime factor of a given number

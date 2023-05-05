@@ -3,28 +3,57 @@
 #include <string.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0
+ * @brief Takes input from the user.
+ * 
+ * @return float The input value.
  */
-
-int main(void)
+float input()
 {
-    char n1[] = "123456789";
-    char n2[] = "987654321";
-    char r[20];
-    char *result;
+    float number;
 
-    result = infinite_add(n1, n2, r, sizeof(r));
+    printf("Enter number: ");
+    scanf("%f", &number);
 
-    if (result != 0)
-    {
-        printf("%s + %s = %s\n", n1, n2, result);
-    }
-    else
-    {
-        printf("Error: result does not fit in buffer\n");
-    }
+    return number;
+}
 
-    return (0);
+/**
+ * @brief Calculates the sum of two numbers.
+ * 
+ * @param num1 The first number.
+ * @param num2 The second number.
+ * @return float The sum of the two numbers.
+ */
+float addition(float num1, float num2)
+{
+    return num1 + num2;
+}
+
+/**
+ * @brief Displays the result of the addition.
+ * 
+ * @param n1 The first number.
+ * @param n2 The second number.
+ * @param sum The sum of the two numbers.
+ */
+void display(float n1, float n2, float sum)
+{
+    printf("%.2f + %.2f = %.2f\n", n1, n2, sum);
+}
+
+int main()
+{
+    float number1, number2, result;
+
+    // take input from the user
+    number1 = input();
+    number2 = input();
+
+    // calculate the addition of the two numbers
+    result = addition(number1, number2);
+
+    // display the result
+    display(number1, number2, result);
+
+    return 0;
 }

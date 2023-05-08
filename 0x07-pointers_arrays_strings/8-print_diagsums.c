@@ -11,6 +11,7 @@
 void print_diagsums(int *a, int size)
 {
     int i, sum1 = 0, sum2 = 0;
+    int *p1 = a, *p2 = a + size - 1;
 
     /* Iterate through each element of the matrix */
     for (i = 0; i < size * size; i++)
@@ -18,13 +19,15 @@ void print_diagsums(int *a, int size)
         /* If the element is on the main diagonal, add it to sum1 */
         if (i % (size + 1) == 0)
         {
-            sum1 += *(a + i);
+            sum1 += *p1;
+            p1 += size + 1;
         }
 
         /* If the element is on the secondary diagonal, add it to sum2 */
-        if (i % (size - 1) == 0 && i != 0 && i != size * (size - 1))
+        if (i % (size - 1) == 0 && i != size * (size - 1))
         {
-            sum2 += *(a + i);
+            sum2 += *p2;
+            p2 += size - 1;
         }
     }
 

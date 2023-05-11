@@ -1,59 +1,30 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - returns the natural square root of a number, using recursion
+ * calculate_sqrt - Calculate the natural square root of a number.
+ * @n: The number to calculate the natural square root of.
+ * @guess: The guess for the square root.
  *
- * @n: the number to find the natural square root of
- *
- * Return: the natural square root of n, or -1 if n does not have a natural square root
+ * Return: The natural square root of @n.
  */
-int find_sqrt(int n, int start, int end);
-int _sqrt_recursion(int n)
+int calculate_sqrt(int n, int guess)
 {
-	if (n < 0)
-	{
+	if (guess * guess == n)
+		return (guess);
+	else if (guess * guess > n)
 		return (-1);
-	}
-	else if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-	else
-	{
-		return (find_sqrt(n, 1, n));
-	}
+	return (calculate_sqrt(n, guess + 1));
 }
 
 /**
- * find_sqrt - finds the natural square root of a number between a given range, using recursion
+ * _sqrt_recursion - Returns the natural square root of a number.
+ * @n: The number to calculate the natural square root of.
  *
- * @n: the number to find the natural square root of
- * @start: the starting point of the range to search
- * @end: the ending point of the range to search
- *
- * Return: the natural square root of n, or -1 if n does not have a natural square root
+ * Return: The natural square root of @n.
  */
-int find_sqrt(int n, int start, int end)
+int _sqrt_recursion(int n)
 {
-	int mid = (start + end) / 2;
-
-	if (mid * mid == n)
-	{
-		return (mid);
-	}
-	else if (mid * mid > n)
-	{
-		return (find_sqrt(n, start, mid - 1));
-	}
-	else
-	{
-		if ((mid + 1) * (mid + 1) > n)
-		{
-			return (mid);
-		}
-		else
-		{
-			return (find_sqrt(n, mid + 1, end));
-		}
-	}
+	if (n < 0)
+		return (-1);
+	return (calculate_sqrt(n, 0));
 }

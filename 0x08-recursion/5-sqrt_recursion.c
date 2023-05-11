@@ -8,6 +8,7 @@
  *
  * Return: the natural square root of n, or -1 if n does not have a natural square root
  */
+int find_sqrt(int n, int start, int end);
 int _sqrt_recursion(int n)
 {
 	if (n < 0)

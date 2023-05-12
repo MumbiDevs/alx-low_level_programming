@@ -6,8 +6,8 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int main(int argc, char *argv[])
 {
-        printf("Hello, world!\n");
-        return (0);
+    printf("%s\n", argv[0]);
+    return 0;
 }

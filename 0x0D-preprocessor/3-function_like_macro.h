@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define ABS(x) (((x) < 0) ? -(x) : (x))
 
 /**
  * ABS - Computes the absolute value of a number
@@ -8,8 +9,6 @@
  *              It returns the absolute value of a signed integer, floating-point,
  *              or character constant.
  */
-#define ABS(x) (((x) < 0) ? -(x) : (x))
-
 int main(void)
 {
 	int num = -98;

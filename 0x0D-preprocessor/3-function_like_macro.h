@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define ABS(x) (((x) < 0) ? -(x) : (x))
 
 /**
  * ABS - Computes the absolute value of a number
@@ -11,6 +10,7 @@
  */
 int main(void)
 {
+	#define ABS(x) (((x) < 0) ? -(x) : (x))
 	int num = -98;
 	float fnum = 98.0;
 

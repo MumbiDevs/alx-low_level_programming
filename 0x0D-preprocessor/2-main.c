@@ -1,14 +1,22 @@
 #include <stdio.h>
 
 /**
+ * printFileName - Prints the name of the file it was compiled from
+ */
+void printFileName(void)
+{
+	printf("Compiled from file: %s\n", __FILE__);
+}
+
+/**
  * main - Entry point of the program
  *
- * Description: This program prints the name of the file it was compiled from.
+ * Description: Calls the printFileName function to print the file name.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	printf("Compiled from: %s\n", __FILE__);
-	return (0);
+	printFileName();
+	return 0;
 }

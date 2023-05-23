@@ -12,8 +12,8 @@
 
 int main(void)
 {
-	int num = -10;
-	float fnum = -5.5;
+	int num = -98;
+	float fnum = 98.0;
 
 	printf("Absolute value of %d: %d\n", num, ABS(num));
 	printf("Absolute value of %.2f: %.2f\n", fnum, ABS(fnum));

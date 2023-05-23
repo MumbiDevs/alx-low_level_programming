@@ -8,7 +8,7 @@
  * Description: This macro evaluates the sum of the given numbers.
  *              It returns the result of adding the two numbers together.
  */
-#define SUM(x, y) ((x) + (y))
+#define sum(x, y) ((x) + (y))
 
 int main(void)
 {

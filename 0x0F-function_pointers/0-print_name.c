@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "function_pointers.h"
 
 /**
  * print_name - Prints a name using a function pointer.
@@ -32,7 +33,7 @@ void print_name_function(char *name)
  */
 int main(void)
 {
-	char name[] = "John Doe";
+	char name[] = "Racheal Maina";
 
 	print_name(name, print_name_function);
 

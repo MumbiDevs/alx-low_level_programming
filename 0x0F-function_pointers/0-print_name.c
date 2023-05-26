@@ -13,29 +13,3 @@ void print_name(char *name, void (*f)(char *))
 	if (name && f)
 		f(name);
 }
-
-/**
- * print_name_function - Prints the provided name.
- * @name: The name to be printed.
- *
- * Return: void
- */
-void print_name_function(char *name)
-{
-	if (name)
-		printf("Name: %s\n", name);
-}
-
-/**
- * main - Entry point
- *
- * Return: 0 on success
- */
-int main(void)
-{
-	char name[] = "Racheal Maina";
-
-	print_name(name, print_name_function);
-
-	return 0;
-}

@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
@@ -21,15 +20,4 @@ void *malloc_checked(unsigned int b)
 	}
 
 	return (ptr);
-}
-
-int main(void)
-{
-	unsigned int size = 100;
-	int *arr = malloc_checked(size * sizeof(int));
-
-	/* Use the allocated memory */
-
-	free(arr);
-	return (0);
 }

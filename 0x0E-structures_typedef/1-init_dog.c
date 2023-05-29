@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 
 /**
@@ -7,21 +7,8 @@
  * @age: The age of the dog.
  * @owner: The owner of the dog.
  */
-
-
-
-void init_dog(struct dog *d, char *name, float age, char *owner)
-{
-	d->name = name;
-	d->age = age;
-	d->owner = owner;
-}
-
 void init_dog(struct dog *d, char *name, float age, char *owner);
-int main(void)
 {
-	struct dog my_dog;
-
 	init_dog(&my_dog, "Buddy", 3.5, "John");
 
 	printf("Name: %s\n", my_dog.name);

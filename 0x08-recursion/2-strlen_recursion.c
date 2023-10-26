@@ -2,28 +2,17 @@
 #include "main.h"
 
 /**
- * _strlen - Calculates and prints the length of a string.
+ * _strlen_recursion - Calculates and prints the length of a string recursively.
  * @s: The string to calculate the length of.
  *
  * Return: The length of the string.
  */
-int _strlen(char *s)
+int _strlen_recursion(char *s)
 {
-    int length = 0;
-
-    while (*s)
+    if (*s == '\0')
     {
-        length++;
-        s++;
+        return 0;
     }
 
-    printf("The length of the string is: %d\n", length);
-    return length;
-}
-
-int main(void)
-{
-    char *str = "Hello, World!";
-    _strlen(str);
-    return (0);
+    return 1 + _strlen_recursion(s + 1);
 }

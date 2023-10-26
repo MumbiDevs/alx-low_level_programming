@@ -9,7 +9,7 @@
  */
 int factorial(int n)
 {
-    int result = 1; // Declare variables at the beginning of the block.
+    int result = 1; /* Declare variables at the beginning of the block.*/
     int i;
 
     if (n < 0)

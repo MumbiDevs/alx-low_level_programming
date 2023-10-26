@@ -8,6 +8,8 @@
  */
 int is_prime_number(int n)
 {
+    int i;
+
     if (n <= 1)
     {
         return 0; /* 0 and 1 are not prime numbers. */
@@ -23,7 +25,7 @@ int is_prime_number(int n)
         return 0; /* Divisible by 2 or 3, not prime. */
     }
 
-    int i = 5;
+    i = 5;
     while (i * i <= n)
     {
         if (n % i == 0 || n % (i + 2) == 0)

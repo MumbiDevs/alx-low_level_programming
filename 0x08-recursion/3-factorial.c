@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include "main.h"
 
-/* Function to calculate the factorial */
 int factorial(int n)
 {
+    int result = 1; // Declare variables at the beginning of the function.
+
     if (n < 0)
     {
         return -1; /* Error: n is less than 0. */
     }
-    int result = 1;
-    int i;
 
-    for (i = 1; i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
         result *= i;
     }

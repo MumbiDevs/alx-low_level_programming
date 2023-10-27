@@ -8,10 +8,13 @@
  * Return: 1 if the string is a palindrome, 0 otherwise.
  */
 int is_palindrome(char *s) {
-    int len = strlen(s);
+    if (s == NULL || *s == '\0') {
+        return 1; // An empty string is a palindrome.
+    }
 
-    if (len <= 1) {
-        return 1; // An empty string or a single character is a palindrome.
+    int len = 0;
+    while (s[len] != '\0') {
+        len++;
     }
 
     return check_palindrome(s, 0, len - 1);

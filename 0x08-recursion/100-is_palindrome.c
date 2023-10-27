@@ -32,15 +32,3 @@ int is_palindrome(char *s) {
 
     return 1; /* The string is a palindrome. */
 }
-
-int main() {
-    char str1[] = "racecar";
-    char str2[] = "hello";
-    char str3[] = "";
-
-    printf("%s is a palindrome: %d\n", str1, is_palindrome(str1));
-    printf("%s is a palindrome: %d\n", str2, is_palindrome(str2));
-    printf("An empty string is a palindrome: %d\n", is_palindrome(str3));
-
-    return 0;
-}

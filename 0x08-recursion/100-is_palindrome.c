@@ -9,17 +9,23 @@
  */
 int is_palindrome(char *s) {
     if (s == NULL) {
-        return 0; // Handle the case of a NULL string.
+        return 0; /* Handle the case of a NULL string. */
     }
 
-    int len = strlen(s);
-    for (int i = 0; i < len / 2; i++) {
-        if (s[i] != s[len - 1 - i]) {
-            return 0; // The string is not a palindrome.
+    int len = 0;
+    while (s[len] != '\0') {
+        len++;
+    }
+
+    int i, j;
+
+    for (i = 0, j = len - 1; i < j; i++, j--) {
+        if (s[i] != s[j]) {
+            return 0; /* The string is not a palindrome. */
         }
     }
 
-    return 1; // The string is a palindrome.
+    return 1; /* The string is a palindrome. */
 }
 
 int main() {

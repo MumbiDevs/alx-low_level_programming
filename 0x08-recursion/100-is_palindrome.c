@@ -10,7 +10,7 @@
 int is_palindrome_recursive(char *s, int start, int end);
 int is_palindrome(char *s) {
     if (s == NULL) {
-        return 0; // Handle the case of a NULL string.
+        return 0; /* Handle the case of a NULL string. */
     }
 
     int len = strlen(s);

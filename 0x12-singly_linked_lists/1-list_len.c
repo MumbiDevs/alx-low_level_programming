@@ -1,6 +1,5 @@
 #include "lists.h"  /* Include the header file where list_t is defined */
-#include <stddef.h>  /* Include for size_t definition */
-
+#include <stdio.h> 
 /**
  * list_len - Returns the number of elements in a linked list_t list.
  * @h: A pointer to the head of the list_t list.

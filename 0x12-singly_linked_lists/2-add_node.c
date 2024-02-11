@@ -11,30 +11,20 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-    list_t *new_node;
-    unsigned int len = 0;
+	list_t *new;
+	unsigned int len = 0;
 
-    /* Allocate memory for the new node */
-    new_node = malloc(sizeof(list_t));
-    if (new_node == NULL)
-        return (NULL);
+	while (str[len])
+		len++;
 
-    /* Duplicate the string */
-    new_node->str = strdup(str);
-    if (new_node->str == NULL)
-    {
-        free(new_node);  /* Free allocated memory for the node */
-        return (NULL);
-    }
+	new = malloc(sizeof(list_t));
+	if (!new)
+		return (NULL);
 
-    /* Calculate the length of the string */
-    new_node->len = strlen(str);
+	new->str = strdup(str);
+	new->len = len;
+	new->next = (*head);
+	(*head) = new;
 
-    /* Set the next pointer of the new node to the current head */
-    new_node->next = *head;
-
-    /* Update the head to point to the new node */
-    *head = new_node;
-
-    return (new_node);
+	return (*head);
 }

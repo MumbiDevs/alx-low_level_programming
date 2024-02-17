@@ -11,8 +11,8 @@
  */
 void print_binary(unsigned long int n)
 {
-    int i;
-    int size = sizeof(unsigned long int) * 8; /* Assuming 8 bits per byte */
+	unsigned long int temp;
+	int i;
 
     if (n == 0)
     {

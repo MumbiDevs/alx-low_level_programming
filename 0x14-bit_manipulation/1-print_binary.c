@@ -16,21 +16,18 @@ void print_binary(unsigned long int n)
 
     if (n == 0)
     {
-        putchar('0');
-        putchar('\n');
+        printf("0");
         return;
     }
 
-    for (i = size - 1; i >= 0; i--)
-    {
-        if ((n >> i) & 1)
-            break;
-    }
+    for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
+		;
 
-    for (; i >= 0; i--)
-    {
-        putchar((n >> i) & 1 ? '1' : '0');
-    }
-
-    putchar('\n');
+	for (; shifts >= 0; shifts--)
+	{
+		if ((n >> shifts) & 1)
+			printf("1");
+		else
+			printf("0");
+	}
 }

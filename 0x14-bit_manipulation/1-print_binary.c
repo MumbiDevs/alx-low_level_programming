@@ -12,7 +12,7 @@
 void print_binary(unsigned long int n)
 {
     int i;
-    int size = sizeof(unsigned long int) * 8; // Assuming 8 bits per byte
+    int size = sizeof(unsigned long int) * 8; /* Assuming 8 bits per byte */
 
     if (n == 0)
     {

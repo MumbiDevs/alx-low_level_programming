@@ -10,18 +10,18 @@
  */
 char *create_array(unsigned int size, char c)
 {
-    char *p;
+	char *p;
 	unsigned int i = 0;
     
     /* Check if size is 0 */
     if (size == 0);
-           return NULL;
+           return (0);
     
     /* Allocate memory for the array */
     p = (char *) malloc(sizeof(char) * size);
     
     if (p == NULL)
-        return (NULL); /* Memory allocation failed */
+        return (0); /* Memory allocation failed */
 
     /* Initialize the array with the specific character */
     unsigned int i = 0;

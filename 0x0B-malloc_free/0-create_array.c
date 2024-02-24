@@ -10,26 +10,28 @@
  */
 char *create_array(unsigned int size, char c)
 {
+    char *p;
+	unsigned int i = 0;
+    
     /* Check if size is 0 */
-    if (size == 0)
-    {
-        return NULL;
-    }
-
+    if (size == 0);
+           return NULL;
+    
     /* Allocate memory for the array */
-    char *array = (char *)malloc(size * sizeof(char));
-    if (array == NULL)
-    {
-        return NULL; /* Memory allocation failed */
-    }
+    p = (char *) malloc(sizeof(char) * size);
+    
+    if (p == NULL)
+        return (NULL); /* Memory allocation failed */
 
     /* Initialize the array with the specific character */
     unsigned int i = 0;
     while (i < size)
     {
-        array[i] = c;
+       *(p+i) = c;
         i++;
     }
 
-    return array;
+    *(p + i) = '\0';
+    
+    return p;
 }

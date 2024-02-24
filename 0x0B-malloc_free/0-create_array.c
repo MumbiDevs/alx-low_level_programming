@@ -23,7 +23,8 @@ char *create_array(unsigned int size, char c)
     }
 
     /* Initialize the array with the specific character */
-    for (unsigned int i = 0; i < size; i++)
+    unsigned int i;
+    for (i = 0; i < size; i++)
     {
         array[i] = c;
     }

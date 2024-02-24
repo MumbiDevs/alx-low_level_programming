@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <stdio.h> // for exit and EXIT_FAILURE
+#include <stdio.h>
 
 /**
  * malloc_checked - Allocates memory using malloc

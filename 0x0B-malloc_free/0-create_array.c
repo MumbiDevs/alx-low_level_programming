@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * create_array - Creates an array of chars and initializes it with a specific char
@@ -23,10 +24,11 @@ char *create_array(unsigned int size, char c)
     }
 
     /* Initialize the array with the specific character */
-    unsigned int i;
-    for (i = 0; i < size; i++)
+    unsigned int i = 0;
+    while (i < size)
     {
         array[i] = c;
+        i++;
     }
 
     return array;

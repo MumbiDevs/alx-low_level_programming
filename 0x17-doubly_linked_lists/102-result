@@ -1,18 +1,34 @@
-def is_palindrome(n):
-    return str(n) == str(n)[::-1]
+#include <stdio.h>
 
-def largest_palindrome_product():
-    largest_palindrome = 0
-    for i in range(999, 99, -1):
-        for j in range(i, 99, -1):
-            product = i * j
-            if product < largest_palindrome:
-                break
-            if is_palindrome(product):
-                largest_palindrome = product
-    return largest_palindrome
+int is_palindrome(int n) {
+    int reversed = 0, original = n;
+    while (n > 0) {
+        reversed = reversed * 10 + n % 10;
+        n /= 10;
+    }
+    return original == reversed;
+}
 
-result = largest_palindrome_product()
+int largest_palindrome_product() {
+    int largest_palindrome = 0;
+    for (int i = 999; i >= 100; i--) {
+        for (int j = i; j >= 100; j--) {
+            int product = i * j;
+            if (product < largest_palindrome)
+                break;
+            if (is_palindrome(product) && product > largest_palindrome)
+                largest_palindrome = product;
+        }
+    }
+    return largest_palindrome;
+}
 
-with open("102-result", "w") as file:
-    file.write(str(result))
+int main() {
+    int result = largest_palindrome_product();
+    FILE *file = fopen("102-result", "w");
+    if (file != NULL) {
+        fprintf(file, "%d", result);
+        fclose(file);
+    }
+    return 0;
+}

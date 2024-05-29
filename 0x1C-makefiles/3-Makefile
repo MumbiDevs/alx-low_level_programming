@@ -1,0 +1,36 @@
+# 3-Makefile
+
+# Variables
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+# Default target
+all: $(NAME)
+
+# Link the object files to create the executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Compile the .c files to .o files
+%.o: %.c
+	$(CC) -c -o $@ $<
+
+# Remove the executable and temporary files
+clean:
+	$(RM) *~ $(NAME)
+
+# Remove the object files
+oclean:
+	$(RM) $(OBJ)
+
+# Remove the executable, object files, and temporary files
+fclean: clean oclean
+
+# Force recompilation of all source files
+re: fclean all
+
+# Phony targets to avoid conflicts with files named clean, oclean, fclean, or re
+.PHONY: all clean oclean fclean re

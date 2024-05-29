@@ -3,23 +3,16 @@
 # Variables
 CC = gcc
 SRC = main.c school.c
-OBJ = main.o school.o
+OBJ = $(SRC:.c=.o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-# Default target
-all: $(NAME)
+# Phony targets to avoid conflicts with files named clean, oclean, fclean, or re
+.PHONY: all clean oclean fclean re
 
 # Rule to link the object files to create the executable
-$(NAME): $(OBJ)
+all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-# Rule to compile each .c file to a .o file individually
-main.o: main.c m.h
-	$(CC) -c main.c $(CFLAGS)
-
-school.o: school.c m.h
-	$(CC) -c school.c $(CFLAGS)
 
 # Rule to remove the executable and temporary files
 clean:
@@ -35,5 +28,3 @@ fclean: clean oclean
 # Rule to force recompilation of all source files
 re: fclean all
 
-# Phony targets to avoid conflicts with files named clean, oclean, fclean, or re
-.PHONY: all clean oclean fclean re

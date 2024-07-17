@@ -1,5 +1,5 @@
 
-#include "search_algos.h"
+#include "gorithm.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
